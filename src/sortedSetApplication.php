@@ -4,7 +4,13 @@
 namespace Gao\redisApplication;
 
 
-class sortedSetApplication
+abstract class sortedSetApplication
 {
+    protected $prefix = 'redis:sortedSet';
 
+    /**
+     ** 返回Redis实例.
+     * @return \Redis
+     */
+    abstract public function redis();
 }
