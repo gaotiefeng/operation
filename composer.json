@@ -1,11 +1,16 @@
 {
-    "name": "gaotiefeng/redis-operation",
+    "name": "gaotiefeng/redis-application",
     "description": "redis operation",
     "type": "library",
     "license": "MIT",
+    "keywords": [
+        "php",
+        "redis"
+    ],
+
     "autoload": {
       "psr-4": {
-        "feng\\redisOperation\\": "src/"
+          "Gao\\redisOperation\\": "src/"
       }
     },
     "require": {
@@ -20,5 +25,6 @@
             "email": "1096392101@qq.com"
         }
     ],
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+
 }

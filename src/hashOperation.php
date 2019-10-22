@@ -1,10 +1,10 @@
 <?php
 
 
-namespace feng\redisOperation;
+namespace Gao\redisOperation;
 
 
-class hashOperation
+abstract class hashOperation
 {
 
 }

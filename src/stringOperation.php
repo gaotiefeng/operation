@@ -1,6 +1,6 @@
 <?php
 
-namespace feng\redisOperation;
+namespace Gao\redisOperation;
 
 abstract class stringOperation
 {
