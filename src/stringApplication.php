@@ -1,8 +1,8 @@
 <?php
 
-namespace Gao\redisOperation;
+namespace Gao\redisApplication;
 
-abstract class stringOperation
+abstract class stringApplication
 {
 
     protected $prefix;
