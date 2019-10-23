@@ -15,10 +15,16 @@ abstract class stringApplication
      */
     abstract public function redis();
 
-
+    /**
+     * @param $key
+     * @param $val
+     * @return bool
+     */
     public function set($key,$val)
     {
-        $this->redis()->set($this->getPrefix($key),$val);
+        $sKey = $this->getPrefix($key);
+
+        return $this->redis()->set($sKey,$val);
     }
 
     public function get($key)

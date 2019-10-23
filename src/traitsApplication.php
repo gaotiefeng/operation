@@ -12,7 +12,7 @@ trait traitsApplication
      */
     public function getPrefix($key)
     {
-        return $this->prefix.$key;
+        return ''.$this->prefix.':'.$key;
     }
 
 }
