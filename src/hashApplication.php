@@ -16,35 +16,35 @@ abstract class hashApplication
      */
     abstract public function redis();
 
-    public function set($hkey,$val)
+    public function set($hashKey,$val)
     {
-        $key = $this->getPrefix($hkey);
+        $key = $this->getPrefix($hashKey);
 
-        return $this->redis()->hSet($key,$hkey,$val);
+        return $this->redis()->hSet($key,$hashKey,$val);
     }
 
-    public function get($hkey)
+    public function get($hashKey)
     {
-        $key = $this->getPrefix($hkey);
+        $key = $this->getPrefix($hashKey);
 
-        return $this->redis()->hGet($key,$hkey);
+        return $this->redis()->hGet($key,$hashKey);
     }
 
     /**
-     * @param $key
+     * @param $hashKey
      * @return mixed 1 | 0
      */
-    public function exists($hkey)
+    public function exists($hashKey)
     {
-        $key = $this->getPrefix($hkey);
+        $key = $this->getPrefix($hashKey);
 
-        return $this->redis()->hExists($key,$hkey);
+        return $this->redis()->hExists($key,$hashKey);
     }
 
-    public function del($hkey)
+    public function del($hashKey)
     {
-        $key = $this->getPrefix($hkey);
+        $key = $this->getPrefix($hashKey);
 
-        $this->redis()->hDel($key,$hkey);
+        $this->redis()->hDel($key,$hashKey);
     }
 }
