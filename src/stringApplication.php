@@ -24,7 +24,7 @@ abstract class stringApplication
     {
         $sKey = $this->getPrefix($key);
 
-        return $this->redis()->set($sKey,$val);
+        return $this->redis()->set($sKey,$val,$this->ttl);
     }
 
     public function get($key)
