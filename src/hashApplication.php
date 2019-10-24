@@ -3,7 +3,6 @@
 
 namespace Gao\redisApplication;
 
-
 abstract class hashApplication
 {
     use traitsApplication;
@@ -16,18 +15,18 @@ abstract class hashApplication
      */
     abstract public function redis();
 
-    public function set($hashKey,$val)
+    public function set($hashKey, $val)
     {
         $key = $this->getPrefix($hashKey);
 
-        return $this->redis()->hSet($key,$hashKey,$val);
+        return $this->redis()->hSet($key, $hashKey, $val);
     }
 
     public function get($hashKey)
     {
         $key = $this->getPrefix($hashKey);
 
-        return $this->redis()->hGet($key,$hashKey);
+        return $this->redis()->hGet($key, $hashKey);
     }
 
     /**
@@ -38,13 +37,13 @@ abstract class hashApplication
     {
         $key = $this->getPrefix($hashKey);
 
-        return $this->redis()->hExists($key,$hashKey);
+        return $this->redis()->hExists($key, $hashKey);
     }
 
     public function del($hashKey)
     {
         $key = $this->getPrefix($hashKey);
 
-        $this->redis()->hDel($key,$hashKey);
+        $this->redis()->hDel($key, $hashKey);
     }
 }

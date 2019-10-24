@@ -3,7 +3,6 @@
 
 namespace Gao\redisApplication;
 
-
 abstract class setApplication
 {
     use traitsApplication;

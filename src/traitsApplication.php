@@ -3,7 +3,6 @@
 
 namespace Gao\redisApplication;
 
-
 trait traitsApplication
 {
     /**
@@ -14,5 +13,4 @@ trait traitsApplication
     {
         return ''.$this->prefix.':'.$key;
     }
-
 }

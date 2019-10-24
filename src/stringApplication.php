@@ -20,11 +20,11 @@ abstract class stringApplication
      * @param $val
      * @return bool
      */
-    public function set($key,$val)
+    public function set($key, $val)
     {
         $sKey = $this->getPrefix($key);
 
-        return $this->redis()->set($sKey,$val,$this->ttl);
+        return $this->redis()->set($sKey, $val, $this->ttl);
     }
 
     public function get($key)

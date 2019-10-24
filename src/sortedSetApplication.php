@@ -3,7 +3,6 @@
 
 namespace Gao\redisApplication;
 
-
 use App\Model\PayOrder;
 
 abstract class sortedSetApplication

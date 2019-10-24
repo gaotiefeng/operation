@@ -3,7 +3,6 @@
 
 namespace Gao\redisApplication;
 
-
 abstract class listApplication
 {
     use traitsApplication;
@@ -66,7 +65,7 @@ abstract class listApplication
     {
         $listKey = $this->getPrefix($key);
 
-        return $this->redis()->lRem($listKey,$val,$this->count);
+        return $this->redis()->lRem($listKey, $val, $this->count);
     }
 
     /**
