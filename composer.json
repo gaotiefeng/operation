@@ -15,7 +15,7 @@
     },
     "require": {
         "php": ">=7.2",
-        "phpunit/phpunit": "^7.0",
+
         "friendsofphp/php-cs-fixer": "^2.14"
     },
     "require-dev": {
@@ -29,7 +29,6 @@
     ],
     "extra": [],
     "scripts": {
-        "test" : "./vendor/bin/phpunit",
         "cs-fix": "./vendor/bin/php-cs-fixer fix ./"
     },
     "minimum-stability": "dev"
