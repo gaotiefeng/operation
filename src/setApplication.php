@@ -20,7 +20,7 @@ abstract class setApplication
      * @param mixed ...$val
      * @return bool|int
      */
-    public function sAdd($key, $val)
+    public function sAdd($key, ...$val)
     {
         $setKey = $this->getPrefix($key);
 
@@ -43,10 +43,10 @@ abstract class setApplication
      * 移除集合中元素
      * return 被成功移除的元素的数量
      * @param $key
-     * @param $val
+     * @param mixed ...$val
      * @return int
      */
-    public function sRem($key, $val)
+    public function sRem($key, ...$val)
     {
         $setKey = $this->getPrefix($key);
 

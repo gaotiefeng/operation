@@ -25,7 +25,12 @@ abstract class sortedSetApplication
         return $this->redis()->zAdd($zKey, $this->options, $score, $value);
     }
 
-    public function zRem($key, $val)
+    /**
+     * @param $key
+     * @param mixed ...$val
+     * @return int
+     */
+    public function zRem($key, ...$val)
     {
         $zKey = $this->getPrefix($key);
 

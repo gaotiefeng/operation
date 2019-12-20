@@ -35,7 +35,7 @@ abstract class listApplication
      * @param $val
      * @return bool|int list length
      */
-    public function lPush($key, $val)
+    public function lPush($key, ...$val)
     {
         $listKey = $this->getPrefix($key);
 
@@ -89,7 +89,7 @@ abstract class listApplication
      * @param $val
      * @return bool|int  list length
      */
-    public function rPush($key, $val)
+    public function rPush($key, ...$val)
     {
         $listKey = $this->getPrefix($key);
 
